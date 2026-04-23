@@ -1,0 +1,440 @@
+.student-container {
+  padding: 2rem 3rem;
+  font-family: "Poppins", sans-serif;
+  background: #fafbff;
+  min-height: 100vh;
+}
+
+/* Header */
+.form-header h2 {
+  font-size: 1.6rem;
+  color: #222;
+}
+.form-header p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+.student-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.student-card img{
+  object-fit: cover;
+  
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 6px rgba(124, 58, 237, 0.4);
+}
+
+.enroll-btn {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 15px;
+}
+
+.enroll-btn:hover {
+  background: #6d28d9;
+}
+
+/* Student Records */
+.records {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.records h2 {
+  margin-bottom: 0.5rem;
+}
+
+.records p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.search {
+  padding: 0.6rem 1rem;
+  width: 60%;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Table */
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th,
+.records-table td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.records-table th {
+  background: #f4f4ff;
+  color: #333;
+}
+
+/* Base Styles (already included by you) */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .student-container {
+    padding: 1.5rem 2rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-header p {
+    font-size: 0.95rem;
+  }
+
+  .search {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .form-header p {
+    text-align: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* Single column on tablets */
+    gap: 1rem;
+  }
+
+  .record-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .records-table th,
+  .records-table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+/* ---------- Existing Styles ---------- */
+.student-container {
+  padding: 2rem 3rem;
+  font-family: "Poppins", sans-serif;
+  background: #fafbff;
+  min-height: 100vh;
+}
+
+/* Header */
+.form-header h2 {
+  font-size: 1.6rem;
+  color: #222;
+}
+.form-header p {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Form */
+.student-form {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.student-card img {
+  object-fit: cover;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 6px rgba(124, 58, 237, 0.4);
+}
+
+.enroll-btn {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.5rem;
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 15px;
+}
+
+.enroll-btn:hover {
+  background: #6d28d9;
+}
+
+/* Student Records */
+.records {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.records h2 {
+  margin-bottom: 0.5rem;
+}
+
+.records p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.search {
+  padding: 0.6rem 1rem;
+  width: 60%;
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+
+.filter-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Table */
+.records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.records-table th,
+.records-table td {
+  text-align: left;
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.records-table th {
+  background: #f4f4ff;
+  color: #333;
+}
+
+/* ---------- Responsive Design ---------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .student-container {
+    padding: 1.5rem 2rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .form-header p {
+    font-size: 0.95rem;
+  }
+
+  .search {
+    width: 70%;
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .student-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .form-header p {
+    text-align: center;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* Single column */
+    gap: 1rem;
+  }
+
+  .record-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .filter-btn {
+    width: 100%;
+  }
+
+  .records-table th,
+  .records-table td {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .student-container {
+    padding: 1rem;
+  }
+
+  .form-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .student-form,
+  .records {
+    padding: 1rem;
+  }
+
+  .enroll-btn {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /* Make table scrollable */
+  .records-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .records-table th,
+  .records-table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+}

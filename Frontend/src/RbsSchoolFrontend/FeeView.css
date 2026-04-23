@@ -1,0 +1,162 @@
+.fd-card {
+  max-width: 760px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 2px rgba(23, 26, 31, 0.08);
+  padding: 32px 24px 48px;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #171a1f;
+  position: relative; /* for back button positioning */
+}
+
+/* ===== heading ===== */
+.fd-title { font-size: 24px; font-weight: 600; margin: 0 0 4px; }
+.fd-sub   { font-size: 14px; color: #565d6d; margin: 0 0 24px; }
+
+/* ===== table-like header ===== */
+.fd-head,
+.fd-row { display: grid; grid-template-columns: 140px 1fr; gap: 24px; align-items: center; }
+
+.fd-head { font-weight: 600; margin-bottom: 12px; }
+.fd-head span:first-child { padding-left: 4px; }
+
+/* ===== input rows ===== */
+.fd-row { margin-bottom: 24px; }
+.fd-row label { font-size: 15px; }
+.fd-row input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #dfe1e6;
+  border-radius: 6px;
+  background: #fafbfc;
+  transition: border-color 0.15s;
+}
+.fd-row input:focus {
+  outline: none;
+  border-color: #0077cc;
+  background: #ffffff;
+}
+
+/* exam row uses grey background for label */
+.fd-exam label {
+  background: #f7f7f7;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ===== button ===== */
+.fd-btn {
+  width: 100%;
+  padding: 11px 0;
+  margin-top: 12px;
+  background: #0077cc;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.fd-btn:hover        { background: #004e86; }
+.fd-btn:active       { background: #003357; }
+.fd-btn:disabled     { opacity: 0.4; cursor: not-allowed; }
+
+/* back button – absolute top-right */
+.fd-back {
+  position:absolute;
+  top:24px;
+  right:24px;
+  background:none;
+  border:none;
+  color:#0077cc;
+  font-size:14px;
+  font-weight:600;
+  cursor:pointer;
+  padding:4px 8px;
+}
+.fd-back:hover   { color:#004e86; }
+.fd-back:active  { color:#003357; }
+
+/* ============================= */
+/* 📱 Responsive Styles */
+/* ============================= */
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .fd-card {
+    padding: 28px 20px 40px;
+  }
+
+  .fd-head,
+  .fd-row {
+    grid-template-columns: 120px 1fr;
+    gap: 16px;
+  }
+
+  .fd-title {
+    font-size: 22px;
+  }
+}
+
+/* Phones (<= 600px) */
+@media (max-width: 600px) {
+  .fd-card {
+    padding: 20px 16px 32px;
+    margin: 1rem;
+  }
+
+  .fd-title {
+    font-size: 20px;
+  }
+
+  .fd-sub {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+
+  .fd-head,
+  .fd-row {
+    grid-template-columns: 1fr; /* stack label and input */
+    gap: 8px;
+  }
+
+  .fd-head {
+    display: none; /* hide header labels on small screen */
+  }
+
+  .fd-row {
+    margin-bottom: 16px;
+  }
+
+  .fd-row label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+
+  .fd-row input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .fd-exam label {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .fd-btn {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+
+  .fd-back {
+    top: 16px;
+    right: 16px;
+    font-size: 13px;
+    padding: 3px 6px;
+  }
+}

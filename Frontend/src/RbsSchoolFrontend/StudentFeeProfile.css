@@ -1,0 +1,105 @@
+/* Base */
+.page {
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #171A1F;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 { font-size: 28px; font-weight: bold; margin-top: 12px; }
+h2, h3 { font-size: 18px; font-weight: 600; }
+p { font-size: 14px; color: #6B7280; }
+
+/* Navbar */
+.navbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.logo { font-size: 20px; font-weight: bold; }
+.nav-links a {
+  margin: 0 12px;
+  font-size: 14px;
+  color: #171A1F;
+  text-decoration: none;
+}
+.nav-links a.active { color: #0077CC; font-weight: 600; }
+.nav-links a:hover { color: #0077CC; }
+
+/* Layout */
+.main-grid {
+  flex: 1;
+  padding: 24px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px) {
+  .main-grid { grid-template-columns: 320px 1fr; }
+}
+.left-col { display: flex; flex-direction: column; gap: 24px; }
+
+/* Cards */
+.card {
+  background: white;
+  border: 1px solid #E6E8EC;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+/* Table */
+.table-card { padding: 0; overflow: hidden; }
+.table-header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px; border-bottom: 1px solid #E6E8EC;
+}
+.table-wrapper { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 12px 8px; text-align: left; }
+th { font-size: 16px; font-weight: 600; border-bottom: 1px solid #E6E8EC; }
+tr { border-bottom: 1px solid #F0F2F4; }
+
+/* Badges */
+.status-paid { 
+  background: #06D6A0; 
+  color: #fff !important;
+  cursor: pointer;
+  padding: .2rem .5rem;
+  border-radius: .2rem;
+}
+.status-pending { 
+  background: rgb(255, 114, 114);
+  color: #fff !important;
+  cursor: pointer;
+  padding: .2rem .5rem;
+  border-radius: .2rem; 
+}
+
+.save-btn {
+  background: #0077CC; 
+  color: white;
+  border: none; 
+  border-radius: 6px;
+  padding: 8px 14px; 
+  cursor: pointer; 
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.save-btn:hover { background: #004E86; }
+
+
+.student-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #E6E8EC;
+  background: #f9fafb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}

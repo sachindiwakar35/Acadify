@@ -1,0 +1,188 @@
+.classes-wrapper {
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.classes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* allow stacking on smaller screens */
+}
+
+.classes-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.classes-header p {
+  color: #555;
+  max-width: 500px;
+}
+
+.classes-illustration {
+  max-width: 250px;
+  width: 100%;
+}
+
+.add-class,
+.registered-classes {
+  background: #fff;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-grid textarea {
+  grid-column: span 2;
+  resize: none;
+}
+
+.add-btn {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: #004aad;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #003680;
+}
+
+.registered-classes table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+.registered-classes th,
+.registered-classes td {
+  border: 1px solid #ddd;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.registered-classes th {
+  background: #f8f8f8;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+.delete-btn {
+  color: red;
+}
+
+.FeeView {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  background: #004aad;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.FeeView:hover {
+  background: #003680;
+}
+
+/* ============================= */
+/* 📱 Responsive Styles */
+/* ============================= */
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .classes-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .classes-illustration {
+    max-width: 200px;
+    margin-top: 1rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Phones (<= 600px) */
+@media (max-width: 600px) {
+  .classes-wrapper {
+    padding: 1rem;
+  }
+
+  .classes-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .classes-header p {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .add-class,
+  .registered-classes {
+    padding: 1rem;
+  }
+
+  .registered-classes table,
+  .registered-classes thead,
+  .registered-classes tbody,
+  .registered-classes th,
+  .registered-classes td,
+  .registered-classes tr {
+    display: block;
+    width: 100%;
+  }
+
+  .registered-classes tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.5rem;
+  }
+
+  .registered-classes td {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .registered-classes td:last-child {
+    border-bottom: none;
+  }
+
+  .registered-classes th {
+    display: none; /* hide table headers on phone */
+  }
+
+  .add-btn,
+  .FeeView {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,322 @@
+.dashboard-container {
+  padding: 1rem 3rem;
+  font-family: "Poppins", sans-serif;
+  background: #fafbff;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #2563eb;
+}
+
+.logout-btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}
+
+/* Welcome */
+.welcome {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.welcome h1 {
+  font-size: 2rem;
+  color: #4f46e5;
+}
+
+.highlight {
+  color: #2563eb;
+}
+
+.welcome p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Summary Section */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: #333;
+}
+
+.card .number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 0.3rem;
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Activities + Quick Actions */
+.activity-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.activities {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.activities h2 {
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.activities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activities li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  color: #444;
+}
+
+.activities li small {
+  color: #888;
+}
+
+.quick-actions {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.quick-actions h2 {
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.action-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.8rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.action-btn:hover {
+  transform: scale(1.03);
+}
+
+.purple {
+  background: #7c3aed;
+  color: #fff;
+}
+
+.blue {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Session Overlay */
+.session-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 246, 252, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  border-radius: 20px;
+}
+
+.session-input {
+  padding: 10px 15px;
+  margin: 15px 0;
+  font-size: 16px;
+  border: 2px solid #6c63ff;
+  border-radius: 10px;
+  outline: none;
+}
+
+.session-btn {
+  padding: 10px 20px;
+  background: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.session-btn:hover {
+  background: #5848d6;
+}
+
+.dashboard-content {
+  margin-top: 20px;
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile Menu (hidden by default) */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  padding: 2rem 1.5rem;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 1.2rem;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Responsive Developer Note */
+.note2 {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 2rem;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  word-wrap: break-word;
+  letter-spacing: 0.5px;
+}
+
+.note2:hover {
+  cursor: pointer;
+}
+
+/* Make font slightly bigger on larger screens */
+@media (min-width: 768px) {
+  .note2 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Adjust for very small screens */
+@media (max-width: 480px) {
+  .note2 {
+    font-size: 0.75rem;
+    padding: 0 10px;
+  }
+}
+
+.note2:hover {
+  cursor: pointer;
+}
+
+.mobile-menu .logout-btn {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none; /* Hide desktop menu */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger */
+  }
+}
